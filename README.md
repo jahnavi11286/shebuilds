@@ -3,7 +3,7 @@ Azure demo link:https://examsin.azurewebsites.net/
 
 Steps to run my application locally
 
-step-1:-git clone https://github.com/jahnavi11286/microsoft-engage
+step-1:-git clone https://github.com/jahnavi11286/shebuilds.git
 
 step-2:-open this project in visual studio code
 
