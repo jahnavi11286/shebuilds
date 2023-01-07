@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {% load static %}
+    <!-- Favicons -->
+  <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: FlexStart - v1.9.0
+  * Template URL: https://bootstrapmade.com/flexstart-bootstrap-startup-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'fonts/icomoon/style.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    
+    <!-- Style -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <title>New Question</title>
+  </head>
+  <body>
+  <header id="header" class="header fixed-top header-scrolled">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+      <a href="/" class="logo d-flex align-items-center">
+        <img src="{% static 'assets/img/logo.png' %}" alt="">
+        <span>Exams.In</span>
+      </a>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto" href="/adminhome">Home</a></li>
+          
+          {% if 'email' in request.session %}
+          <li><a class="getstarted scrollto" href="/logout">Logout</a></li>
+          {% else %}
+          <li><a class="getstarted scrollto" href="/login">Admin login</a></li>
+          {% endif %}
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  
+  <div class="content">
+    
+      <div class="row">
+         <div class="col-md-6">
+          <img src="{% static 'images/undraw_remotely_2j6y.svg' %}" alt="Image" class="img-fluid">
+        </div>
+        <div class="col-md-6 contents">
+          <div class="row justify-content-center">
+            <div class="col-md-8">
+              <div class="mb-4">
+              <h3>New Question</h3>
+              
+            </div>
+            <form  method="post">
+              {% csrf_token %}
+              <div class="form-group first">
+                <label for="examid">Exam Id</label>
+                <input name="examid" type="text" class="form-control" id="examid">
+              </div>
+              <br>
+              <div class="form-group first">
+                <label for="qno">Question no</label>
+                <input name="qno" type="text" class="form-control" id="qno">
+              </div>
+              <br>
+              <div class="form-group first">
+                <label for="question">Question</label>
+                <input name="question" type="text" class="form-control" id="question">
+              </div>
+              <br>
+              <div class="form-group first">
+                <label for="option1">Option 1</label>
+                <input name="option1" type="text" class="form-control" id="option1">
+              </div>
+              <br>
+              <div class="form-group first">
+                <label for="option2">Option 2</label>
+                <input name="option2" type="text" class="form-control" id="option2">
+              </div>
+              <br>
+              <div class="form-group first">
+                <label for="option3">Option 3</label>
+                <input name="option3" type="text" class="form-control" id="option3">
+              </div>
+              <br>
+              <div class="form-group first">
+                <label for="option4">Option 4</label>
+                <input name="option4" type="text" class="form-control" id="option4">
+              </div>
+              <br>
+              <div class="form-group first">
+                <label for="crtopt">Correct option</label>
+                <input name="crtopt" type="text" class="form-control" id="crtopt">
+              </div>
+              <br>
+
+              <input type="submit" value="Create" class="btn btn-block btn-primary">
+
+             
+              </div>
+            </form>
+            </div>
+          </div>
+        </div>       
+
+      </div>
+    
+  </div>
+
+  
+    <script src="{% static 'js/jquery-3.3.1.min.js'%}"></script>
+    <script src="{% static 'js/popper.min.js'%}"></script>
+    <script src="{% static 'js/bootstrap.min.js'%}"></script>
+    <script src="{% static 'js/main.js'%}"></script>
+  </body>
+</html>
